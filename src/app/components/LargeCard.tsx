@@ -5,7 +5,7 @@ import TextsmsIcon from "@mui/icons-material/Textsms";
 import ShareIcon from "@mui/icons-material/Share";
 const LargeCard = ({imageSrc, date, description} : any) => {
   return (
-    <div className="w-[424px] h-[569px] bg-transparent shadow-lg rounded-lg overflow-hidden">
+    <div className="w-[424px] h-[569px] bg-transparent shadow-lg rounded-lg overflow-hidden border border-white">
       {/* Image */}
       <div className="w-full h-[349px] relative">
         <Image
