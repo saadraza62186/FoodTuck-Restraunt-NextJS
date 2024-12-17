@@ -9,7 +9,7 @@ const greatVibes = Great_Vibes({
 
 const Section9 = () => {
   return (
-    <div className="w-[1980px] h-[558px] relative">
+    <div className="w-[1920px] h-[558px] relative">
       {/* Background Image */}
       <div className="w-full h-full relative">
         <Image

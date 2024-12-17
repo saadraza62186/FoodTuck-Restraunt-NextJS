@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import SearchIcon from "@mui/icons-material/Search";
 import LocalMallIcon from '@mui/icons-material/LocalMall';
+import Link from "next/link";
 const MainNav = () => {
   return (
     <div className="w-[1320px] h-[87px] top-[45px] left-[300px] bg-transparent ">
@@ -10,12 +11,22 @@ const MainNav = () => {
       </div>
       <div className="flex justify-between">
         <div className="text-base font-normal flex gap-[40px] text-[#FFFFFF] mt-4 ">
+          <Link href='/'>
           <p>Home</p>
+          </Link>
+          <Link href='/menu'>
           <p>Menu</p>
+          </Link>
+          <Link href='/blog'>
           <p>Blog</p>
+          </Link>
           <p>Pages</p>
+          <Link href='/about'>
           <p>About</p>
+          </Link>
+          <Link href='/shop'>
           <p>Shop</p>
+          </Link>
           <p>Conatct</p>
         </div>  
         <div className="mr-[50px] flex">
