@@ -31,17 +31,25 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <div className={`hidden md:flex text-white gap-4 lg:gap-6 text-sm lg:text-base 2xl:gap-10 2xl:font-bold 2xl:text-[16px]`}>
+        <Link href='/'>
         <h2 className="cursor-pointer hover:text-yellow-500">Home</h2>
+        </Link>
         <Link href="/menu">
           <h2 className='cursor-pointer hover:text-yellow-500'>Menu</h2>
         </Link>
+        <Link href='/blog'>
         <h2 className='cursor-pointer hover:text-yellow-500'>Blog</h2>
+        </Link>
         <h2 className='cursor-pointer hover:text-yellow-500'>Pages</h2>
+        <Link href='/about'>
         <h2 className='cursor-pointer hover:text-yellow-500'>About</h2>
+        </Link>
         <Link href='/shop'>
         <h2 className='cursor-pointer hover:text-yellow-500'>Shop</h2>
         </Link>
+        <Link href='/CheckOut'>
         <h2 className='cursor-pointer hover:text-yellow-500'>Contact</h2>
+        </Link>
       </div>
 
       {/* Icons */}
