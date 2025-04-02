@@ -56,11 +56,11 @@ const MainFooter = () => {
             Useful <span className="ml-2 text-[#FFFFFF]">Links</span>
           </h1>
           <div className="flex flex-col gap-4 mt-3 text-sm md:text-[20px] 2xl:gap-[40px] 2xl:mt-4">
-            <a href="#" className="hover:underline hover:text-[#FF9F0D]">About</a>
+            <a href="/about" className="hover:underline hover:text-[#FF9F0D]">About</a>
             <a href="#" className="hover:underline hover:text-[#FF9F0D]">News</a>
             <a href="#" className="hover:underline hover:text-[#FF9F0D]">Partners</a>
-            <a href="#" className="hover:underline hover:text-[#FF9F0D]">Team</a>
-            <a href="#" className="hover:underline hover:text-[#FF9F0D]">Menu</a>
+            <a href="/chef" className="hover:underline hover:text-[#FF9F0D]">Team</a>
+            <a href="/menu" className="hover:underline hover:text-[#FF9F0D]">Menu</a>
             <a href="#" className="hover:underline hover:text-[#FF9F0D]">Contact</a>
           </div>
         </div>
