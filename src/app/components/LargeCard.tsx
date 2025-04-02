@@ -1,54 +1,62 @@
+"use client"
+
 import React from "react";
 import Image from "next/image";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
-import TextsmsIcon from "@mui/icons-material/Textsms";
-import ShareIcon from "@mui/icons-material/Share";
-const LargeCard = ({imageSrc, date, description} : any) => {
+import { ThumbsUp, MessageSquare, Share2 } from 'lucide-react';
+
+interface LargeCardProps {
+  imageSrc: string;
+  date: string;
+  description: string;
+}
+
+const LargeCard = ({ imageSrc, date, description }: LargeCardProps) => {
   return (
-    <div className="w-[424px] h-[569px] bg-transparent shadow-lg rounded-lg overflow-hidden border border-white">
+    <div className="w-full bg-transparent shadow-lg rounded-lg overflow-hidden border border-white/20 h-full flex flex-col">
       {/* Image */}
-      <div className="w-full h-[349px] relative">
+      <div className="w-full aspect-[4/3] relative">
         <Image
-          src={imageSrc} // Replace with your image path
-          alt="Card Image"
-          width={424}
-          height={349}
-          className="w-full h-full object-cover"
-          quality={100} // Ensures high-quality image rendering
-          priority={true} // Loads the image with priority to improve loading time
+          src={imageSrc || "/placeholder.svg"}
+          alt="Blog Image"
+          fill
+          className="object-cover"
+          priority={true}
         />
       </div>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="p-4 md:p-6 flex flex-col flex-grow">
         {/* Date */}
-        <div className="text-[#FF9F0D] text-sm mb-2 font-normal text-[16px] mt-[20px]">
+        <div className="text-[#FF9F0D] text-sm mb-2">
           {date}
         </div>
 
         {/* Description */}
-        <h1 className="text-[24px] font-bold font-helvetica text-[#FFFFFF] mb-4 ">
-         {description}
+        <h1 className="text-xl md:text-2xl font-bold text-[#FFFFFF] mb-4">
+          {description}
         </h1>
 
+        {/* Spacer to push the footer to the bottom */}
+        <div className="flex-grow"></div>
+
         {/* Learn More + Icons */}
-        <div className="flex items-center justify-between mt-[40px]">
+        <div className="flex items-center justify-between mt-4">
           {/* Learn More Button */}
-          <button className="text-[#FFFFFF] text-sm mb-2 font-normal text-[16px]">
+          <button className="text-[#FFFFFF] text-sm hover:text-[#FF9F0D] transition-colors">
             Learn More
           </button>
 
           {/* Icons */}
           <div className="flex gap-3">
-            <div className="w-[32px] h-[32px] text-[#FFFFFF] bg- flex justify-center items-center">
-              <ThumbUpIcon />
-            </div>
-            <div className="w-[32px] h-[32px] text-[#FF9F0D] flex justify-center items-center">
-              <TextsmsIcon />
-            </div>
-            <div className="w-[32px] h-[32px] text-[#FFFFFF] flex justify-center items-center">
-              <ShareIcon />
-            </div>
+            <button className="text-[#FFFFFF] hover:text-[#FF9F0D] transition-colors">
+              <ThumbsUp className="w-5 h-5" />
+            </button>
+            <button className="text-[#FF9F0D]">
+              <MessageSquare className="w-5 h-5" />
+            </button>
+            <button className="text-[#FFFFFF] hover:text-[#FF9F0D] transition-colors">
+              <Share2 className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>

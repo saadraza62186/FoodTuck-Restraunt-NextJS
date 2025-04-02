@@ -1,35 +1,41 @@
-import React from "react";
-import { Great_Vibes } from "next/font/google";
-import ChefCard from "./ChefCard";
-import Comment from "./Comment";
-import Image from "next/image";
+"use client"
+import { Great_Vibes } from "next/font/google"
+import Comment from "./Comment"
+
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
-  weight: "400", // You can choose the weight as needed
-});
+  weight: "400",
+})
+
 const Section8 = () => {
   return (
-    <div className="w-[1920px] h-[1150px] bg-[#0D0D0DF2] flex">
-      <div className="w-[1273px] h-[770px] ml-[300px] mt-[150px]">
-        <div className="font-normal text-[32px] text-[#FF9F0D]">
-          <h1 className={`${greatVibes.className}`}>Testimonials</h1>
-        </div>
-        <div className="font-bold font-helvetica text-5xl text-[#FFFFFF]">
-          <h1>What our client are saying</h1>
-        </div>
-        <div className="mt-[150px] flex justify-center">
-          <div>
+    <div className="w-full bg-[#0D0D0DF2] py-20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="font-normal text-2xl md:text-3xl text-[#FF9F0D] text-center">
+            <h1 className={`${greatVibes.className}`}>Testimonials</h1>
+          </div>
+          <div className="font-bold text-3xl md:text-4xl lg:text-5xl text-[#FFFFFF] text-center">
+            <h1>What our client are saying</h1>
+          </div>
+
+          <div className="mt-16 md:mt-24">
             <Comment />
           </div>
-        </div>
-        <div className="w-[86px] h-[16px] flex justify-center mt-[40px]">
-            <div className="flex justify-center">
-            <Image src='/comment4.png' alt="Dot Image" width={322} height={194} className="w-full h-full flex justify-center ml-[1200px] mt-[40px]"/>
+
+          <div className="flex justify-center mt-8">
+            <div className="flex gap-2">
+              <div className="w-2 h-2 rounded-full bg-[#FF9F0D]"></div>
+              <div className="w-2 h-2 rounded-full bg-white opacity-50"></div>
+              <div className="w-2 h-2 rounded-full bg-white opacity-50"></div>
+              <div className="w-2 h-2 rounded-full bg-white opacity-50"></div>
             </div>
+          </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Section8;
+export default Section8
+

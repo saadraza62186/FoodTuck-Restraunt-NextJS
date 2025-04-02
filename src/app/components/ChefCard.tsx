@@ -1,30 +1,30 @@
-import React from 'react'
-import Image from 'next/image'
-const ChefCard = ({imageSrc, name, description} : any) => {
-  return (
-    <div>
-         <div className="relative w-[312px] h-[391px]">
-      {/* Image */}
-      <Image
-        src={imageSrc} // Replace with your image path
-        alt="Chef Card"
-        width={322} 
-        height={194}
-        className="absolute top-0 left-0"
-      />
+"use client"
+import Image from "next/image"
 
-      {/* White div */}
-      <div className="absolute bottom-0 w-[181px] h-[67px] bg-white flex flex-col gap-1">
-        <h1 className='font-bold text-[18px] text-[#333333] ml-3'>
-        {name}
-        </h1>
-        <h1 className='font-normal text-[14px] text-[#333333] ml-3'>
-        {description}
-        </h1>
+interface ChefCardProps {
+  imageSrc: string
+  name: string
+  description: string
+}
+
+const ChefCard = ({ imageSrc, name, description }: ChefCardProps) => {
+  return (
+    <div className="flex justify-center">
+      <div className="relative w-full max-w-[312px] aspect-[4/5]">
+        {/* Image */}
+        <div className="w-full h-full relative">
+          <Image src={imageSrc || "/placeholder.svg"} alt={`Chef ${name}`} fill className="object-cover" />
+        </div>
+
+        {/* Info box */}
+        <div className="absolute bottom-0 left-0 w-3/5 bg-white py-3 px-4">
+          <h1 className="font-bold text-base md:text-lg text-[#333333]">{name}</h1>
+          <h2 className="font-normal text-sm text-[#333333]">{description}</h2>
+        </div>
       </div>
-    </div>
     </div>
   )
 }
 
 export default ChefCard
+

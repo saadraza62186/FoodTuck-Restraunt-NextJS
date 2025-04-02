@@ -1,21 +1,25 @@
-import React from 'react'
-import Image from 'next/image'
-const Reciepie = ({imageSrc,name,items} : any) => {
+"use client"
+import Image from "next/image"
+
+interface ReciepieProps {
+  imageSrc: string
+  name: string
+  items: string
+}
+
+const Reciepie = ({ imageSrc, name, items }: ReciepieProps) => {
   return (
-    <div className='w-[218px] h-[247px] text-[#FFFFFF] flex flex-col gap-6 justify-center items-center'>
-        <div className='w-[120px] h-[120px] flex justify-center items-center'>
-            <Image src={imageSrc} alt={name} width={322} height={194} className='w-full h-full'/>
-        </div>
-        <div className='w-[300px] h-[32px] font-helvetica font-bold text-2xl flex justify-center'>
-            <h1>{name}</h1>
-        </div>
-        <div className='w-[67px] h-[48px] font-helvetica font-bold flex justify-center text-[40px]'>
-            <h1>
-                {items}
-            </h1>
-        </div>
+    <div className="flex flex-col items-center justify-center gap-4 md:gap-6 text-white py-6">
+      <div className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 relative">
+        <Image src={imageSrc || "/placeholder.svg"} alt={name} fill className="object-contain" />
+      </div>
+      <div className="text-center">
+        <h2 className="font-bold text-xl md:text-2xl mb-2">{name}</h2>
+        <p className="font-bold text-3xl md:text-4xl">{items}</p>
+      </div>
     </div>
   )
 }
 
 export default Reciepie
+

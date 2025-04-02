@@ -1,36 +1,39 @@
-import React from 'react'
-import Image from 'next/image'
+"use client"
+import Image from "next/image"
+
 const Partner = () => {
   return (
-    <div className='w-[1322px] h-[275px] flex flex-col justify-center items-center '>
-        <div className='font-normal text-[18px] text-[#333333]'>
-        Partners & Clients
+    <div className="w-full flex flex-col justify-center items-center">
+      <div className="text-center">
+        <p className="text-base md:text-lg text-[#333333] mb-2">Partners & Clients</p>
+        <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-10 md:mb-16">
+          We work with the best people
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10 w-full">
+        <div className="aspect-[2/1] relative">
+          <Image src="/partner1.png" alt="Partner 1" fill className="object-contain" />
         </div>
-        <div className='font-helvetica font-bold text-5xl mt-6'>
-        We work with the best pepole
+        <div className="aspect-[2/1] relative">
+          <Image src="/partner2.png" alt="Partner 2" fill className="object-contain" />
         </div>
-        <div className='w-[1322px] h-[129.37px] flex justify-between items-center mt-[80px]'>
-            <div className='w-[240.96px] h-[129.23px]'>
-                <Image src='/partner1.png' alt='' width={100} height={200} className='w-full h-full'/>
-            </div>
-            <div className='w-[166.04px] h-[129.23px]'>
-                <Image src='/partner2.png' alt='' width={100} height={200} className='w-full h-full'/>
-            </div>
-           <div className='w-[143.98px] h-[129.23px]'>
-                <Image src='/partner3.png' alt='' width={100} height={200} className='w-full h-full'/>
-            </div>
-           <div className='w-[130.98px] h-[129.23px]'>
-                <Image src='/partner4.png' alt='' width={100} height={200} className='w-full h-full'/>
-            </div>
-           <div className='w-[169.97px] h-[129.23px]'>
-                <Image src='/partner5.png' alt='' width={100} height={200} className='w-full h-full'/>
-            </div>
-           <div className='w-[113.98px] h-[129.23px]'>
-                <Image src='/partner6.png' alt='' width={100} height={200} className='w-full h-full'/>
-            </div>
+        <div className="aspect-[2/1] relative">
+          <Image src="/partner3.png" alt="Partner 3" fill className="object-contain" />
         </div>
+        <div className="aspect-[2/1] relative">
+          <Image src="/partner4.png" alt="Partner 4" fill className="object-contain" />
+        </div>
+        <div className="aspect-[2/1] relative">
+          <Image src="/partner5.png" alt="Partner 5" fill className="object-contain" />
+        </div>
+        <div className="aspect-[2/1] relative">
+          <Image src="/partner6.png" alt="Partner 6" fill className="object-contain" />
+        </div>
+      </div>
     </div>
   )
 }
 
 export default Partner
+

@@ -1,64 +1,57 @@
-import React from "react";
-import Image from "next/image";
-import AlderCard from "./AlderCard";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+"use client"
+import Image from "next/image"
+import AlderCard from "./AlderCard"
+import { ThumbsUp } from "lucide-react"
 
 const Menu4 = () => {
   return (
-    <div className="w-full 2xl:w-[1320px] h-auto flex flex-col 2xl:flex-row justify-between">
+    <div className="w-full flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-16">
       {/* Left Content Section */}
-      <div className="flex flex-col gap-[25px] 2xl:gap-[25px] w-full 2xl:w-[880px]">
+      <div className="w-full lg:w-7/12 xl:w-8/12 flex flex-col gap-6 md:gap-8 order-2 lg:order-1">
+        {/* Header Section */}
         <div className="flex flex-col gap-3">
-          <div>
-            <ThumbUpIcon className="w-[24px] h-[24px] text-[#FF9F0D]" />
-          </div>
-          <div className="font-helvetica font-bold text-3xl sm:text-4xl lg:text-5xl 2xl:text-5xl text-[#333333]">
-            <h1>Drinks</h1>
-          </div>
+          <ThumbsUp className="w-6 h-6 text-[#FF9F0D]" />
+          <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-[#333333]">Drinks</h1>
         </div>
-        <div>
-          <div className="flex flex-col gap-6 2xl:gap-6">
-            <AlderCard
-              name="Caffè macchiato"
-              description1="Toasted French bread topped with romano, cheddar"
-              description2="560 CAL"
-              price="32$"
-            />
-            <AlderCard
-              name="Aperol Spritz Capacianno"
-              description1="Gorgonzola, ricotta, mozzarella, taleggio"
-              description2="700 CAL"
-              price="43$"
-            />
-            <AlderCard
-              name="Caffe Latte Campuri"
-              description1="Ground cumin, avocados, peeled and cubed"
-              description2="1000 CAL"
-              price="14$"
-            />
-            <AlderCard
-              name="Tormentoso BushTea Pintoage"
-              description1="Spreadable cream cheese, crumbled blue cheese"
-              description2="560 CAL"
-              price="35$"
-            />
-          </div>
+
+        {/* Cards Section */}
+        <div className="flex flex-col gap-6">
+          <AlderCard
+            name="Caffè macchiato"
+            description1="Toasted French bread topped with romano, cheddar"
+            description2="560 CAL"
+            price="32$"
+          />
+          <AlderCard
+            name="Aperol Spritz Capacianno"
+            description1="Gorgonzola, ricotta, mozzarella, taleggio"
+            description2="700 CAL"
+            price="43$"
+          />
+          <AlderCard
+            name="Caffe Latte Campuri"
+            description1="Ground cumin, avocados, peeled and cubed"
+            description2="1000 CAL"
+            price="14$"
+          />
+          <AlderCard
+            name="Tormentoso BushTea Pintoage"
+            description1="Spreadable cream cheese, crumbled blue cheese"
+            description2="560 CAL"
+            price="35$"
+          />
         </div>
       </div>
 
       {/* Right Image Section */}
-      <div className="relative w-full sm:w-[300px] md:w-[400px] 2xl:w-[448px] h-auto 2xl:h-[626px]">
-        <Image
-          src="/menu6.png" // Ensure this path is correct
-          alt="Drinks Image"
-          layout="responsive"
-          width={448}
-          height={626}
-          quality={100}
-        />
+      <div className="w-full lg:w-5/12 xl:w-4/12 order-1 lg:order-2">
+        <div className="relative aspect-[3/4] w-full">
+          <Image src="/menu6.png" alt="Drinks Image" fill className="object-cover rounded-lg" />
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Menu4;
+export default Menu4
+

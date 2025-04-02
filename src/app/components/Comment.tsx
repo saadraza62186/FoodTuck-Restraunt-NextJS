@@ -1,60 +1,51 @@
-import React from "react";
-import Image from "next/image";
+"use client"
+import Image from "next/image"
+
 const Comment = () => {
   return (
-    <div className="relative w-full max-w-[869px] h-auto bg-gray-100 p-4 flex flex-col justify-center items-center 2xl:w-[869px] 2xl:h-[451px]">
+    <div className="relative w-full bg-gray-100 p-6 md:p-8 flex flex-col justify-center items-center rounded-lg">
       {/* User Image */}
-      <div className="absolute -top-10 flex justify-center 2xl:-top-20">
-        <Image
-          src="/comment1.png" // Replace with user's image path
-          alt="User Image"
-          width={133}
-          height={133}
-          className="rounded-full"
-        />
+      <div className="absolute -top-12 md:-top-16 flex justify-center">
+        <div className="relative w-24 h-24 md:w-32 md:h-32">
+          <Image src="/comment1.png" alt="User Image" fill className="rounded-full object-cover" />
+        </div>
       </div>
 
       {/* Secondary Image */}
-      <div className="mt-3 mb-4 flex justify-center 2xl:mt-5">
-        <Image
-          src="/comment2.png" // Replace with secondary image path
-          alt="Secondary Image"
-          width={48}
-          height={48}
-          className="rounded"
-        />
+      <div className="mt-16 md:mt-20 mb-4">
+        <div className="relative w-10 h-10 md:w-12 md:h-12">
+          <Image src="/comment2.png" alt="Quote Icon" fill className="object-contain" />
+        </div>
       </div>
 
-      {/* Lorem Div */}
-      <div className="mb-4 mt-4 w-full max-w-[696.57px] h-auto flex justify-center items-center font-helvetica text-[16px] text-gray-700 2xl:w-[696.57px] 2xl:h-[103.97px] 2xl:text-[18px] 2xl:text-[#4F4F4F]">
+      {/* Testimonial Text */}
+      <div className="mb-6 text-center text-sm md:text-base lg:text-lg text-gray-700">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
-          Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit
-          eu velit in consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat
+          fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae
+          mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
         </p>
       </div>
 
-      {/* Image with Width 152x24 */}
-      <div className="mb-4 mt-4 flex justify-center">
-        <Image
-          src="/comment3.png" // Replace with image path
-          alt="Wide Image"
-          width={152}
-          height={24}
-        />
+      {/* Rating Stars */}
+      <div className="mb-6">
+        <div className="relative w-32 h-6">
+          <Image src="/comment3.png" alt="Rating Stars" fill className="object-contain" />
+        </div>
       </div>
 
       {/* User Name */}
-      <div className="mb-2 mt-4 flex justify-center font-helvetica font-bold">
-        <h2 className="text-lg font-bold text-gray-900 2xl:text-xl">Alamin Hasan</h2>
+      <div className="mb-1">
+        <h2 className="text-lg md:text-xl font-bold text-gray-900">Alamin Hasan</h2>
       </div>
 
       {/* User Description */}
       <div>
-        <p className="text-gray-600 flex justify-center text-sm 2xl:text-base">Food Specialist</p>
+        <p className="text-gray-600 text-sm md:text-base">Food Specialist</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Comment;
+export default Comment
+

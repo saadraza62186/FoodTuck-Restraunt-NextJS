@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { ChevronRight } from 'lucide-react';
 import Menu1 from "../components/Menu1";
 import Menu2 from "../components/Menu2";
 import Section5 from "../components/Section5";
@@ -10,84 +10,99 @@ import Menu3 from "../components/Menu3";
 import Menu4 from "../components/Menu4";
 import MainFooter from "../components/MainFooter";
 import Partner from "../components/Partner";
-
-const page = () => {
+export default function MenuPage() {
   return (
-    <div className="w-full flex flex-col ">
+    <div className="w-full flex flex-col">
       {/* Navbar Section */}
-      <div className="w-full flex justify-center items-center 2xl:w-[1920px] bg-[#0D0D0DF2]">
+      <div className="w-full bg-[#0D0D0DF2]">
         <Navbar />
       </div>
 
-      {/* Image Section */}
-      <div className="w-[1920px] h-[410px] relative">
+      {/* Hero Banner */}
+      <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[410px] relative">
         {/* Background Image */}
         <Image
-          src="/menu1.png" // Ensure this path is correct
+          src="/menu1.png"
           alt="Menu Image"
-          layout="fill" // Ensures the image covers the entire div
-          objectFit="cover" // Maintains aspect ratio without distortion
-          quality={100} // Optional: ensures high quality
+          fill
+          className="object-cover"
+          priority
         />
 
         {/* Text Overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <h1 className="font-helvetica font-bold text-[48px] text-[#FFFFFF]">
+          <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white">
             Our Menu
           </h1>
-          <div className="font-normal text-[20px] text-[#FFFFFF] flex items-center gap-2">
-            Home <ArrowForwardIosIcon className="w-4 h-4" />{" "}
+          <div className="font-normal text-base md:text-lg text-white flex items-center gap-2 mt-2">
+            Home <ChevronRight className="w-4 h-4" />{" "}
             <div className="text-[#FF9F0D]">Menu</div>
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center 2xl:w-[1920px] 2xl:h-[950px]">
-        <div className="w-full max-w-[1320px] h-auto ml-0 ">
+
+      {/* Menu Sections */}
+      <div className="w-full py-10 md:py-16">
+        <div className="container mx-auto px-4">
           <Menu1 />
         </div>
       </div>
 
-      <div className="w-full flex justify-center 2xl:w-[1920px] 2xl:h-[850px]">
-        <div className="w-full max-w-[1320px] h-auto ml-0 ">
+      <div className="w-full py-10 md:py-16">
+        <div className="container mx-auto px-4">
           <Menu2 />
         </div>
       </div>
 
-      <div className="w-[1923px] h-[468px] bg-[#0D0D0DF2]">
-        <div className="w-[1920px] h-[469px] flex ml-[300px] gap-[170px] items-center">
-          <Reciepie
-            imageSrc="/food14.png"
-            name="Professional Chefs"
-            items="420"
-          />
-          <Reciepie imageSrc="/food15.png" name="Items Of Food" items="320" />
-          <Reciepie
-            imageSrc="/food16.png"
-            name="Years Of Experienced"
-            items="30+"
-          />
-          <Reciepie imageSrc="/food17.png" name="Happy Customers" items="220" />
+      {/* Recipe Stats Section */}
+      <div className="w-full bg-[#0D0D0DF2] py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
+            <Reciepie
+              imageSrc="/food14.png"
+              name="Professional Chefs"
+              items="420"
+            />
+            <Reciepie 
+              imageSrc="/food15.png" 
+              name="Items Of Food" 
+              items="320" 
+            />
+            <Reciepie
+              imageSrc="/food16.png"
+              name="Years Of Experienced"
+              items="30+"
+            />
+            <Reciepie 
+              imageSrc="/food17.png" 
+              name="Happy Customers" 
+              items="220" 
+            />
+          </div>
         </div>
       </div>
-      <div className="w-full flex justify-center 2xl:w-[1920px] 2xl:h-[950px]">
-        <div className="w-full max-w-[1320px] h-auto ml-0 ">
+
+      <div className="w-full py-10 md:py-16">
+        <div className="container mx-auto px-4">
           <Menu3 />
         </div>
       </div>
 
-      <div className="w-full flex justify-center 2xl:w-[1920px] 2xl:h-[850px]">
-        <div className="w-full max-w-[1320px] h-auto ml-0 ">
+      <div className="w-full py-10 md:py-16">
+        <div className="container mx-auto px-4">
           <Menu4 />
         </div>
       </div>
-      <div className="w-[1920px] h-[450px] flex justify-center">
-        <Partner />
+
+      {/* Partners Section */}
+      <div className="w-full py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <Partner />
+        </div>
       </div>
-      <div>
-        <MainFooter />
-      </div>
+
+      {/* Footer */}
+      <MainFooter />
     </div>
   );
-};
-
-export default page;
+}

@@ -28,25 +28,25 @@ const MobileNavbar = () => {
               {/* Menu Links */}
               <div className="flex flex-col text-black gap-4 text-base font-bold mt-6">
                 <Link href="/">
-                  <a className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Home</a>
+                  <div className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Home</div>
                 </Link>
                 <Link href="/menu">
-                  <a className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Menu</a>
+                  <div className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Menu</div>
                 </Link>
                 <Link href="/blog">
-                  <a className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Blog</a>
+                  <div className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Blog</div>
                 </Link>
                 <Link href="/pages">
-                  <a className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Pages</a>
+                  <div className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Pages</div>
                 </Link>
                 <Link href="/about">
-                  <a className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">About</a>
+                  <div className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">About</div>
                 </Link>
                 <Link href="/shop">
-                  <a className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Shop</a>
+                  <div className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Shop</div>
                 </Link>
                 <Link href="/contact">
-                  <a className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Contact</a>
+                  <div className="cursor-pointer hover:text-yellow-500 border-b-2 pb-3">Contact</div>
                 </Link>
               </div>
             </SheetDescription>

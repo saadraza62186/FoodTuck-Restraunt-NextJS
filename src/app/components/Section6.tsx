@@ -1,13 +1,15 @@
+"use client"
+
 import React from 'react'
 import Hero2 from './Hero2'
 
 
 const Section6 = () => {
   return (
-    <div className='w-[1920px] h-[900px] bg-[#0D0D0DF2]'>
-        <div className='ml-[300px]'>
-            <Hero2 />
-        </div>
+    <div className='w-full bg-[#0D0D0DF2] py-16'>
+      <div className='container mx-auto px-4'>
+        <Hero2 />
+      </div>
     </div>
   )
 }

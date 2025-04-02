@@ -1,38 +1,36 @@
-import React from 'react'
-import Image from 'next/image'
-import { Great_Vibes } from "next/font/google";
+import Image from "next/image"
+import { Great_Vibes } from 'next/font/google'
+
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
-  weight: "400", // You can choose the weight as needed
-});
+  weight: "400",
+})
+
 const FoodItems = () => {
   return (
-    <div className='w-[1320px] h-[489px]'>
-        <div className='flex justify-center'> 
-            <h1 className={`${greatVibes.className} text-[#FF9F0D] text-[32px] font-normal`}>Food Category</h1>
+    <div className="w-full">
+      <div className="text-center mb-8">
+        <h2 className={`${greatVibes.className} text-[#FF9F0D] text-2xl sm:text-3xl font-normal mb-4`}>
+          Food Category
+        </h2>
+        <div className="text-3xl sm:text-4xl md:text-5xl font-bold font-helvetica">
+          <span className="text-[#FF9F0D]">Ch</span>
+          <span className="text-white">oose Food Item</span>
         </div>
-        <div className='flex text-[48px] font-bold font-helvetica justify-center'>
-            <div className='text-[#FF9F0D]'>
-            Ch
-            </div>
-            <div className='text-[#FFFFFF]'>
-            oose Food Iteam
-            </div>
-        </div>
-        <div className='w-[1320px] h-[329px] flex gap-4 mt-8'>
-            <div className='w-[306px] h-[329px]'>
-            <Image src='/food5.png' alt='' width={322} height={194} className='w-full h-full'/>
-            </div>
-            <div className='w-[306px] h-[329px]'>
-            <Image src='/food6.png' alt='' width={322} height={194} className='w-full h-full'/>
-            </div>
-            <div className='w-[306px] h-[329px]'>
-            <Image src='/food7.png' alt='' width={322} height={194} className='w-full h-full'/>
-            </div>
-            <div className='w-[306px] h-[329px]'>
-            <Image src='/food8.png' alt='' width={322} height={194} className='w-full h-full'/>
-            </div>
-        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+        {["/food5.png", "/food6.png", "/food7.png", "/food8.png"].map((src, index) => (
+          <div key={index} className="w-full">
+            <Image
+              src={src || "/placeholder.svg"}
+              alt={`Food item ${index + 5}`}
+              width={306}
+              height={329}
+              className="rounded-lg w-full h-auto aspect-[306/329] object-cover"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
