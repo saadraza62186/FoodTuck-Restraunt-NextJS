@@ -40,15 +40,17 @@ const Navbar = () => {
         <Link href='/blog'>
         <h2 className='cursor-pointer hover:text-yellow-500'>Blog</h2>
         </Link>
-        <h2 className='cursor-pointer hover:text-yellow-500'>Pages</h2>
+        <Link href='/chef'>
+        <h2 className='cursor-pointer hover:text-yellow-500'>Chef</h2>
+        </Link>
         <Link href='/about'>
         <h2 className='cursor-pointer hover:text-yellow-500'>About</h2>
         </Link>
         <Link href='/shop'>
         <h2 className='cursor-pointer hover:text-yellow-500'>Shop</h2>
         </Link>
-        <Link href='/CheckOut'>
-        <h2 className='cursor-pointer hover:text-yellow-500'>Contact</h2>
+        <Link href='/faq'>
+        <h2 className='cursor-pointer hover:text-yellow-500'>Faq</h2>
         </Link>
       </div>
 
