@@ -18,15 +18,15 @@ const FoodItems = () => {
           <span className="text-white">oose Food Item</span>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+      <div className="flex gap-6 sm:gap-3 items-center justify-center mt-2">
         {["/food5.png", "/food6.png", "/food7.png", "/food8.png"].map((src, index) => (
-          <div key={index} className="w-full">
+          <div key={index} className="w-[270px]">
             <Image
               src={src || "/placeholder.svg"}
               alt={`Food item ${index + 5}`}
               width={306}
               height={329}
-              className="rounded-lg w-full h-auto aspect-[306/329] object-cover"
+              className="rounded-lg w-[280px] h-auto aspect-[306/329] object-cover"
             />
           </div>
         ))}
