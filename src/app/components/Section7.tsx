@@ -1,6 +1,7 @@
 "use client"
 import { Great_Vibes } from "next/font/google"
 import ChefCard from "./ChefCard"
+import Link from "next/link"
 
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
@@ -25,12 +26,13 @@ const Section7 = () => {
           <ChefCard imageSrc="/chef3.png" name="M. William" description="Advertising Chef" />
           <ChefCard imageSrc="/chef4.png" name="W.Readfroad" description="Chef" />
         </div>
-
-        <div className="flex justify-center mt-10 md:mt-12">
-          <button className="px-8 py-3 border border-[#FF9F0D] text-white bg-transparent rounded-full hover:bg-[#FF9F0D]/10 transition-colors">
-            See More
-          </button>
-        </div>
+        <Link href="/chefs">
+          <div className="flex justify-center mt-10 md:mt-12">
+            <button className="px-8 py-3 border border-[#FF9F0D] text-white bg-transparent rounded-full hover:bg-[#FF9F0D]/10 transition-colors">
+              See More
+            </button>
+          </div>
+        </Link>
       </div>
     </div>
   )

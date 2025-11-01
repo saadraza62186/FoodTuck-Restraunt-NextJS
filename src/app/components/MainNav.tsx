@@ -29,10 +29,23 @@ const MainNav = () => {
               Home
             </Link>
             <Link
+              href="/about"
+              className="hover:text-[#FF9F0D] transition-colors duration-200"
+            >
+              About
+            </Link>
+            <Link
               href="/menu"
               className="hover:text-[#FF9F0D] transition-colors duration-200"
             >
               Menu
+            </Link>
+
+            <Link
+              href="/shop"
+              className="hover:text-[#FF9F0D] transition-colors duration-200"
+            >
+              Shop
             </Link>
             <Link
               href="/blog"
@@ -41,31 +54,12 @@ const MainNav = () => {
               Blog
             </Link>
             <Link
-              href="/pages"
+              href="/chef"
               className="hover:text-[#FF9F0D] transition-colors duration-200"
             >
-              Pages
-            </Link>
-            <Link
-              href="/about"
-              className="hover:text-[#FF9F0D] transition-colors duration-200"
-            >
-              About
-            </Link>
-            <Link
-              href="/shop"
-              className="hover:text-[#FF9F0D] transition-colors duration-200"
-            >
-              Shop
-            </Link>
-            <Link
-              href="/contact"
-              className="hover:text-[#FF9F0D] transition-colors duration-200"
-            >
-              Contact
+              Chef
             </Link>
           </nav>
-
           <div className="hidden lg:flex items-center gap-4">
             <div className="relative">
               <input

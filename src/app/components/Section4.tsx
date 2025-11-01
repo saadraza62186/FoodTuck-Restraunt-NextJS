@@ -1,11 +1,11 @@
-import FoodCard from "./FoodCard"
-import Image from "next/image"
-import { Great_Vibes } from "next/font/google"
+import FoodCard from "./FoodCard";
+import Image from "next/image";
+import { Great_Vibes } from "next/font/google";
 
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
-})
+});
 
 const Section4 = () => {
   return (
@@ -18,7 +18,9 @@ const Section4 = () => {
           <div className="w-full lg:w-1/2">
             <div className="flex flex-col gap-6">
               <div>
-                <h1 className={`${greatVibes.className} text-[#FF9F0D] font-normal text-2xl sm:text-3xl`}>
+                <h1
+                  className={`${greatVibes.className} text-[#FF9F0D] font-normal text-2xl sm:text-3xl`}
+                >
                   Why Choose us
                 </h1>
               </div>
@@ -29,11 +31,12 @@ const Section4 = () => {
                 </div>
                 <div className="text-[#FFFFFF]">And Experienced</div>
               </div>
-              <div className="font-normal text-base text-[#FFFFFF]">
+              <div className="font-normal text-base text-[#FFFFFF] w-[500px]">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui
-                  volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices
-                  mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
+                  Our restaurant combines fresh ingredients, bold flavors, and
+                  experienced chefs to deliver extraordinary meals every time.
+                  From gourmet burgers to delectable desserts and fine wines, we
+                  ensure every bite is a memorable experience.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-10">
@@ -66,15 +69,20 @@ const Section4 = () => {
                 </div>
               </div>
               <div className="w-full sm:w-[374px] mt-6 md:mt-10">
-                <Image src="/experienced.png" alt="Experienced" width={374} height={93} className="w-full h-auto" />
+                <Image
+                  src="/experienced.png"
+                  alt="Experienced"
+                  width={374}
+                  height={93}
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Section4
-
+export default Section4;

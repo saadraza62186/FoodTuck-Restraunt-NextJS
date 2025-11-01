@@ -22,7 +22,7 @@ const Section8 = () => {
           <div className="mt-16 md:mt-24">
             <Comment />
           </div>
-
+{/* 
           <div className="flex justify-center mt-8">
             <div className="flex gap-2">
               <div className="w-2 h-2 rounded-full bg-[#FF9F0D]"></div>
@@ -30,7 +30,7 @@ const Section8 = () => {
               <div className="w-2 h-2 rounded-full bg-white opacity-50"></div>
               <div className="w-2 h-2 rounded-full bg-white opacity-50"></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

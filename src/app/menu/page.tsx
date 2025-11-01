@@ -11,6 +11,7 @@ import Menu4 from "../components/Menu4";
 import ProductsSection from "../components/ProductsSection";
 import MainFooter from "../components/MainFooter";
 import Partner from "../components/Partner";
+import AnimatedCounter from "../components/AnimatedCounter";
 export default function MenuPage() {
   return (
     <div className="w-full flex flex-col">
@@ -62,22 +63,22 @@ export default function MenuPage() {
             <Reciepie
               imageSrc="/food14.png"
               name="Professional Chefs"
-              items="420"
+              items={<AnimatedCounter to={420} start={true} />}
             />
             <Reciepie 
               imageSrc="/food15.png" 
               name="Items Of Food" 
-              items="320" 
+              items={<AnimatedCounter to={320} start={true} />}
             />
             <Reciepie
               imageSrc="/food16.png"
               name="Years Of Experienced"
-              items="30+"
+              items={<AnimatedCounter to={30} start={true} />}
             />
-            <Reciepie 
-              imageSrc="/food17.png" 
-              name="Happy Customers" 
-              items="220" 
+            <Reciepie
+              imageSrc="/food17.png"
+              name="Happy Customers"
+              items={<AnimatedCounter to={220} start={true} />}
             />
           </div>
         </div>

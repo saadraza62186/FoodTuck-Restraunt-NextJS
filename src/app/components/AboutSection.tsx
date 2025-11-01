@@ -1,18 +1,20 @@
-import Image from "next/image"
-import AboutCard from "./AboutCard"
+import Image from "next/image";
+import AboutCard from "./AboutCard";
 
 const AboutSection = () => {
   return (
     <div className="w-full flex flex-col items-center py-8 md:py-12 lg:py-16">
-      <div className="font-helvetica font-bold text-3xl md:text-4xl lg:text-5xl text-center">Why Choose us</div>
-      <div className="font-helvetica font-normal text-sm md:text-base mt-4 text-center max-w-xl px-4">
+      <div className="font-helvetica font-bold text-3xl md:text-4xl lg:text-5xl text-center">
+        Why Choose us
+      </div>
+      <div className="font-helvetica font-normal text-gray-500 text-sm md:text-base mt-4 text-center max-w-xl px-4">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat
-          fringilla bibendum.
+          We serve fresh, flavorful dishes with quality ingredients and a touch
+          of passion in every bite.
         </p>
       </div>
 
-      <div className="w-full mt-8 md:mt-12">
+      <div className="w-full mt-8 md:mt-8">
         <Image
           src="/about1.png"
           alt="About Section Image"
@@ -29,8 +31,7 @@ const AboutSection = () => {
         <AboutCard imageSrc="/Person.png" name="Clean Environment" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutSection
-
+export default AboutSection;

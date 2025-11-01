@@ -10,15 +10,21 @@ interface AlderCardProps {
 
 const AlderCard: React.FC<AlderCardProps> = ({ name, description1, description2, price, isYellow }) => {
   return (
-    <div className="w-[760px] h-[111px] flex flex-col gap-2">
-      <div className="font-helvetica font-bold text-[24px] flex justify-between">
+    <div className="w-full max-w-full min-h-[100px] sm:min-h-[110px] md:min-h-[111px] flex flex-col gap-2 sm:gap-2.5 md:gap-3 py-2 sm:py-3 border-b border-gray-100 last:border-b-0">
+      <div className="font-helvetica font-bold text-base sm:text-lg md:text-xl lg:text-2xl flex xs:flex-row xs:justify-between xs:items-start gap-1 xs:gap-2">
         {/* Apply conditional styling for name */}
-        <div className={`${isYellow ? 'text-[#FF9F0D]' : 'text-black'}`}>{name}</div>
-        <div className="text-[#FF9F0D]">{price}</div>
+        <div className={`${isYellow ? 'text-[#FF9F0D]' : 'text-black'} flex-1 leading-tight pr-2`}>
+          {name}
+        </div>
+        <div className="text-[#FF9F0D] font-bold whitespace-nowrap flex-shrink-0">{price}</div>
       </div>
-      <div>
-        <div className="font-normal text-[16px] text-[#4F4F4F]">{description1}</div>
-        <div className="font-helvetica font-normal text-[16px] text-[#828282]">{description2}</div>
+      <div className="flex flex-col gap-0.5 sm:gap-1">
+        <div className="font-normal text-sm sm:text-base md:text-[16px] text-[#4F4F4F] leading-relaxed">
+          {description1}
+        </div>
+        <div className="font-helvetica font-normal text-xs sm:text-sm md:text-[16px] text-[#828282]">
+          {description2}
+        </div>
       </div>
     </div>
   );

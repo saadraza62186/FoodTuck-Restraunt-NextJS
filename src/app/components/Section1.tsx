@@ -1,6 +1,7 @@
 import Image from "next/image"
 import MainNav from "./MainNav"
 import { Great_Vibes } from "next/font/google"
+import Link from "next/link"
 
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
@@ -49,15 +50,15 @@ const Section1 = () => {
             </div>
 
             <p className="font-normal text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
-              sed pharetra dictum neque massa congue.
+              Experience flavors crafted with passion where every bite tells a story  .
             </p>
-
+            <Link href="/menu">
             <div className="flex justify-center lg:justify-start">
-              <button className="w-full sm:w-40 md:w-48 h-10 sm:h-12 md:h-14 lg:h-16 bg-[#FF9F0D] text-white rounded-full text-xs sm:text-sm md:text-base transition-transform duration-300 hover:scale-105">
-                See Menu
-              </button>
-            </div>
+                <button className="w-full sm:w-40 md:w-48 h-10 sm:h-12 md:h-14 lg:h-16 bg-[#FF9F0D] text-white rounded-full text-xs sm:text-sm md:text-base transition-transform duration-300 hover:scale-105">
+                  See Menu
+                </button>
+              </div>
+            </Link>
           </div>
         </div>
 

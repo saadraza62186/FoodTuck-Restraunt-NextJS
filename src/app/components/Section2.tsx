@@ -1,7 +1,14 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Check } from "lucide-react"
+import Image from "next/image";
+import { Check } from "lucide-react";
+import { Great_Vibes } from "next/font/google";
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+})
+
 
 const Section2 = () => {
   return (
@@ -9,7 +16,7 @@ const Section2 = () => {
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-[1320px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           <div className="flex flex-col gap-4 lg:gap-4">
-            <h2 className="text-[#FF9F0D] font-normal text-2xl md:text-2xl italic font-serif">
+            <h2 className={`${greatVibes.className} text-[#FF9F0D] font-normal text-2xl md:text-4xl italic font-serif`}>
               About us
             </h2>
             <div className="flex flex-col gap-2">
@@ -23,28 +30,28 @@ const Section2 = () => {
             </div>
 
             <p className="text-white text-base leading-relaxed opacity-90">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui
-              volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices
-              mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
+              At our restaurant, we bring you fresh, flavorful dishes made with
+              the highest quality ingredients. From classic meals to gourmet
+              creations, our food is designed to delight your taste buds and
+              make every dining experience unforgettable.
             </p>
-
             <div className="flex flex-col gap-4 text-white">
               <div className="flex items-start gap-3">
                 <Check className="text-white flex-shrink-0 w-5 h-5 mt-1" />
                 <span className="text-base md:text-base">
-                  Lacus nisi, et ac dapibus sit eu velit in consequat.
+                  Fresh ingredients sourced daily for quality meals.
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <Check className="text-white flex-shrink-0 w-5 h-5 mt-1" />
                 <span className="text-base md:text-base">
-                  Quisque diam pellentesque bibendum non dui volutpat fringilla
+                  Fast and friendly service for a great experience.
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <Check className="text-white flex-shrink-0 w-5 h-5 mt-1" />
                 <span className="text-base md:text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  Delicious meals that keep you coming back for more.
                 </span>
               </div>
             </div>
@@ -93,7 +100,7 @@ const Section2 = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Section2
+export default Section2;

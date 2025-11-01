@@ -20,7 +20,7 @@ const page = () => {
         {/* Text Overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
           <h1 className="font-helvetica font-bold text-3xl md:text-4xl lg:text-[48px] text-white">FAQ Page</h1>
-          <div className="font-normal text-base md:text-lg lg:text-xl text-white flex items-center gap-2">
+          <div className="font-normal text-base md:text-lg lg:text-xl text-white flex items-center gap-2 mt-3">
             Home <ArrowForwardIosIcon className="w-3 h-3 md:w-4 md:h-4" /> <div className="text-[#FF9F0D]">FAQ</div>
           </div>
         </div>

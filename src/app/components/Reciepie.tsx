@@ -1,13 +1,14 @@
 "use client"
 import Image from "next/image"
+import { ReactNode } from "react"
 
 interface ReciepieProps {
   imageSrc: string
   name: string
-  items: string
+  items: ReactNode // <-- change here
 }
 
-const Reciepie = ({ imageSrc, name, items }: ReciepieProps) => {
+const Reciepie = ({ imageSrc, name, items  }: ReciepieProps) => {
   return (
     <div className="flex flex-col items-center justify-center gap-4 md:gap-6 text-white py-6">
       <div className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 relative">
@@ -22,4 +23,3 @@ const Reciepie = ({ imageSrc, name, items }: ReciepieProps) => {
 }
 
 export default Reciepie
-
