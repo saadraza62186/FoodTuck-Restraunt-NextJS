@@ -33,7 +33,9 @@ const page = () => {
             Questions Looks Here
           </div>
           <div className="font-normal text-sm md:text-base mt-4 text-center max-w-2xl">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            Have a question about ordering, delivery, or our menu? We answer the
+            most common questions here — if you still need help, contact our
+            support team and we&apos;ll get back to you quickly.
           </div>
           <div className="w-full mt-8 md:mt-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
@@ -57,4 +59,3 @@ const page = () => {
 }
 
 export default page
-

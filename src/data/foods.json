@@ -1,0 +1,82 @@
+[
+  {
+    "id": "f1",
+    "name": "Classic Margherita Pizza",
+    "price": 12.99,
+    "image": "/food10.png",
+    "description": "Wood-fired pizza with fresh tomatoes, basil, and buffalo mozzarella. Simple, bright, and delicious.",
+    "category": "pizza"
+  },
+  {
+    "id": "f2",
+    "name": "Crispy Chicken Burger",
+    "price": 9.5,
+    "image": "/burger.png",
+    "description": "Buttermilk fried chicken, house slaw, and spicy mayo on a toasted brioche bun.",
+    "category": "burger"
+  },
+  {
+    "id": "f3",
+    "name": "Herbed Salmon Bowl",
+    "price": 14.75,
+    "image": "/food12.png",
+    "description": "Pan-seared salmon with quinoa, seasonal greens and lemon herb dressing.",
+    "category": "healthy"
+  },
+  {
+    "id": "f4",
+    "name": "Spicy Chicken Wings",
+    "price": 8.99,
+    "image": "/food11.png",
+    "description": "Crispy wings tossed in buffalo sauce with blue cheese dip.",
+    "category": "appetizer"
+  },
+  {
+    "id": "f5",
+    "name": "Chocolate Lava Cake",
+    "price": 6.5,
+    "image": "/food13.png",
+    "description": "Warm chocolate cake with molten center, served with vanilla ice cream.",
+    "category": "dessert"
+  },
+  {
+    "id": "f6",
+    "name": "Caesar Salad",
+    "price": 7.99,
+    "image": "/food6.png",
+    "description": "Crisp romaine lettuce, parmesan cheese, croutons and classic caesar dressing.",
+    "category": "salad"
+  },
+  {
+    "id": "f7",
+    "name": "Grilled Steak",
+    "price": 18.99,
+    "image": "/food9.png",
+    "description": "Premium ribeye steak grilled to perfection with garlic butter.",
+    "category": "main"
+  },
+  {
+    "id": "f8",
+    "name": "Pasta Carbonara",
+    "price": 11.5,
+    "image": "/food7.png",
+    "description": "Creamy pasta with bacon, egg yolk, parmesan and black pepper.",
+    "category": "pasta"
+  },
+  {
+    "id": "f9",
+    "name": "Fresh Spring Rolls",
+    "price": 6.99,
+    "image": "/food8.png",
+    "description": "Rice paper rolls filled with vegetables, shrimp and peanut sauce.",
+    "category": "appetizer"
+  },
+  {
+    "id": "f10",
+    "name": "Tiramisu",
+    "price": 7.5,
+    "image": "/food5.png",
+    "description": "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cream.",
+    "category": "dessert"
+  }
+]

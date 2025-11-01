@@ -8,7 +8,8 @@ const AboutCard = ({ imageSrc, name }: any) => {
       </div>
       <div className="font-helvetica font-bold text-xl md:text-2xl mt-3 text-center">{name}</div>
       <div className="font-helvetica font-normal text-sm md:text-base mt-3 text-center">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat
+        Bringing fresh, seasonal ingredients to every plate. Our chefs craft approachable dishes that highlight natural
+        flavors and thoughtful pairings.
       </div>
     </div>
   )

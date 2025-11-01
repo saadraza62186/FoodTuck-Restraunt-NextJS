@@ -21,9 +21,8 @@ const Comment = () => {
       {/* Testimonial Text */}
       <div className="mb-6 text-center text-sm md:text-base lg:text-lg text-gray-700">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat
-          fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae
-          mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
+          &quot;Fantastic flavors and fast delivery — the seasoning is spot on and the portions are generous. I order the
+          Crispy Chicken Burger at least once a week. Highly recommended for a quick, comforting meal.&quot;
         </p>
       </div>
 
@@ -48,4 +47,3 @@ const Comment = () => {
 }
 
 export default Comment
-

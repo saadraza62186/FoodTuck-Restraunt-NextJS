@@ -1,0 +1,16 @@
+[
+  {
+    "id": "c1",
+    "name": "Chef Arman Khan",
+    "role": "Head Chef",
+    "image": "/chef1.png",
+    "bio": "10+ years creating modern comfort food with seasonal ingredients and bold flavors."
+  },
+  {
+    "id": "c2",
+    "name": "Chef Sara Ali",
+    "role": "Pastry Chef",
+    "image": "/chef2.png",
+    "bio": "Specializes in handcrafted desserts and artisanal breads made daily."
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "b1",
+    "title": "5 Tips for Perfect Home Pizza",
+    "excerpt": "Achieve a blistered crust and melty cheese at home with these simple techniques.",
+    "image": "/blog1.png",
+    "date": "2025-10-10",
+    "author": "Chef Arman",
+    "content": "Start with high-heat, preheated stone or steel. Use a simple dough, minimal toppings, and watch the bake — the key is speed and heat."
+  },
+  {
+    "id": "b2",
+    "title": "How We Source Fresh Ingredients",
+    "excerpt": "Our local partners and seasonal approach keep menus lively and sustainable.",
+    "image": "/blog2.png",
+    "date": "2025-08-22",
+    "author": "Sara Ali",
+    "content": "We partner with nearby farms, prioritize seasonal produce, and rotate plates to highlight what's best each week."
+  }
+]

@@ -8,6 +8,7 @@ import Section5 from "../components/Section5";
 import Reciepie from "../components/Reciepie";
 import Menu3 from "../components/Menu3";
 import Menu4 from "../components/Menu4";
+import ProductsSection from "../components/ProductsSection";
 import MainFooter from "../components/MainFooter";
 import Partner from "../components/Partner";
 export default function MenuPage() {
@@ -85,6 +86,13 @@ export default function MenuPage() {
       <div className="w-full py-10 md:py-16">
         <div className="container mx-auto px-4">
           <Menu3 />
+        </div>
+      </div>
+
+      <div className="w-full py-10 md:py-16">
+        <div className="container mx-auto px-4">
+          {/* Products fetched from backend API */}
+          <ProductsSection />
         </div>
       </div>
 

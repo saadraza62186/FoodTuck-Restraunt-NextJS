@@ -49,11 +49,9 @@ const BlogCard = ({imageSrc, name} : any) => {
 
           {/* Paragraph Section */}
           <p className="2xl:text-base text-gray-600 mb-6">
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-            amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-            diam nonumy eirmod tempor invidunt ut labore et dolore magna
-            aliquyam erat.
+            Learn how to get the best results at home: short bakes at very high
+            heat yield the most char and chew. Keep toppings light and focus on
+            great dough — flavor comes from technique and quality ingredients.
           </p>
 
           {/* Read More Button */}

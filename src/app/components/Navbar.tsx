@@ -5,9 +5,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import Link from "next/link";
 import MobileNavbar from "./MobileNavbar";
+import CartIcon from "./CartIcon";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,10 +55,10 @@ const Navbar = () => {
       </div>
 
       {/* Icons */}
-      <div className="text-white flex gap-3 sm:gap-4 lg:gap-5 2xl:gap-6">
+      <div className="text-white flex gap-3 sm:gap-4 lg:gap-5 2xl:gap-6 items-center">
         <SearchIcon className="cursor-pointer hover:text-yellow-500 w-5 h-5 lg:w-6 lg:h-6 2xl:w-[24px] 2xl:h-[24px]" />
         <PersonIcon className="cursor-pointer hover:text-yellow-500 w-5 h-5 lg:w-6 lg:h-6 2xl:w-[24px] 2xl:h-[24px]" />
-        <ShoppingBagIcon className="cursor-pointer hover:text-yellow-500 w-5 h-5 lg:w-6 lg:h-6 2xl:w-[24px] 2xl:h-[24px]" />
+        <CartIcon />
       </div>
 
       {/* Mobile Menu */}
