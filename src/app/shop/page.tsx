@@ -5,6 +5,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Image from "next/image";
 import MainFooter from "../components/MainFooter";
 import AddToCartButton from "../components/AddToCartButton";
+import { motion } from "framer-motion";
 
 export default function ShopPage() {
   const [products, setProducts] = useState<any[]>([]);
@@ -27,35 +28,63 @@ export default function ShopPage() {
       : products.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="w-full min-h-screen flex flex-col">
+    <div className="w-full min-h-screen flex flex-col bg-[#0D0D0D0A]">
       {/* Navbar Section */}
       <div className="w-full flex justify-center items-center bg-[#0D0D0DF2]">
         <Navbar />
       </div>
 
       {/* Image Section */}
-      <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[410px] relative">
-        {/* Background Image */}
+      <motion.div
+        className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[410px] relative overflow-hidden"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <Image src="/menu1.png" alt="Menu Image" fill className="object-cover" quality={100} />
 
         {/* Text Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <h1 className="font-helvetica font-bold text-3xl md:text-4xl lg:text-[48px] text-white">Our Shop</h1>
+        <motion.div
+          className="absolute inset-0 flex flex-col items-center justify-center text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h1 className="font-helvetica font-bold text-3xl md:text-4xl lg:text-[48px] text-white">
+            Our Shop
+          </h1>
           <div className="font-normal text-base md:text-lg lg:text-xl text-white flex items-center gap-2 mt-3">
-            Home <ArrowForwardIosIcon className="w-3 h-3 md:w-4 md:h-4" /> <div className="text-[#FF9F0D]">Shop</div>
+            Home <ArrowForwardIosIcon className="w-3 h-3 md:w-4 md:h-4" />{" "}
+            <div className="text-[#FF9F0D]">Shop</div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Shop Content */}
-      <div className="w-full flex-grow flex justify-center px-4 py-8 md:py-12 lg:py-16">
+      <motion.div
+        className="w-full flex-grow flex justify-center px-4 py-8 md:py-12 lg:py-16"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <div className="w-full max-w-7xl">
           {loading ? (
-            <div className="text-center py-12">Loading products...</div>
+            <div className="text-center py-12 text-white">Loading products...</div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredProducts.map((product) => (
-                <div key={product.id} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-4">
+              {filteredProducts.map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all p-4 cursor-pointer"
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
+                  viewport={{ once: true }}
+                >
                   <div className="relative h-48 mb-4">
                     <Image
                       src={product.image || "/placeholder.svg"}
@@ -71,18 +100,23 @@ export default function ShopPage() {
                     <span className="text-gray-500 text-sm">{product.category}</span>
                   </div>
                   <AddToCartButton product={product} />
-                </div>
+                </motion.div>
               ))}
             </div>
           )}
         </div>
-      </div>
+      </motion.div>
 
       {/* Footer */}
-      <div className="w-full mt-auto">
+      <motion.div
+        className="w-full mt-auto"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <MainFooter />
-      </div>
+      </motion.div>
     </div>
   );
 }
-
